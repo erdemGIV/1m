@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recap Demo 1 - Çalışmalar</title>
+</head>
+
+<body>
+
+    <script>
+        let users = [{
+                email: "erdemguzel34@gmail.com",
+                password: "12345"
+            },
+            {
+                email: "emreguzel13@gmail.com",
+                password: "54321"
+            }
+        ]
+
+        let twits = [{
+                email: "erdemguzel34@gmail.com",
+                twit: "Bugün hava çok güzel"
+            },
+            {
+                email: "emreguzel13@gmail.com",
+                twit: "Bugün hava çok güzel değil"
+            }
+        ]
+
+        let email = prompt("email ??");
+        let password = prompt("password ??");
+
+        function entrance() {
+            if (email == users[0].email && password == users[0].password) {
+                console.log(twits[0]);
+            } else if (email == users[1].email && password == users[1].password) {
+                console.log(twits[1]);
+            } else {
+                console.log("Email or Password is frong!!");
+            }
+        }
+
+        entrance(email, password);
+    </script>
+
+</body>
+
+</html>

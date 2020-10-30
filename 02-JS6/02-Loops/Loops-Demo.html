@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döngüler Recap</title>
+</head>
+
+<body>
+
+
+    <script>
+        let users = [{
+                email: "erdemguzel34@gmail.com",
+                password: "12345"
+            },
+            {
+                email: "emreguzel13@gmail.com",
+                password: "54321"
+            }
+        ]
+
+        let twits = [{
+                email: "erdemguzel34@gmail.com",
+                twit: "Bugün hava çok güzel"
+            },
+            {
+                email: "emreguzel13@gmail.com",
+                twit: "Bugün hava çok güzel değil"
+            }
+        ]
+
+        let email = prompt("email ??");
+        let password = prompt("password ??");
+
+        function isThereUser(email, password) {
+            // username ve password'u girmemize rağmen else çalıştırıldı, o sebeple fonksiyona acaba girdiğimiz değerler doğru gidiyor mu diye kontrol etmek için aşağıda c.log'ları kullandık.
+            console.log(email); // Buralarda yazdıklarımızı direkt alabildik, dolayısıyla burada sıkıntı yok.
+            console.log(password); // Sıkıntı for döngüsünün içinde demektir bu:
+            for (i = 0; i < users.length; i++) {
+                if (users[i].email == email && users[i].password == password) { // users'ın [i]'sini koymayı unutmuşuz.
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function entrance() {
+            if (isThereUser(email, password)) {
+                console.log(twits);
+            } else {
+                console.log("Email or Password is wrong!!");
+            }
+        }
+
+        entrance(email, password);
+    </script>
+
+</body>
+
+</html>
